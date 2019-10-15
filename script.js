@@ -124,3 +124,68 @@ function Mahasiswa(nama, energi){
 
 let alfin = Mahasiswa(alfin, 10);
 let priandi = Mahasiswa(priandi, 20);
+
+// 5. Prototype
+
+function Mahasiswa(nama, energi){
+    this.nama = nama;
+    this.energi = energi;
+
+    // pada saat menggunakan `this`, dibelakang layar javascript membuat sebuah Object = 
+    // let this = Object.create(Mahasiswa.prototype);
+    // return this
+
+    Mahasiswa.prototype.makan = function(porsi){
+     this.energi += porsi;
+        console.log(`Hello ${this.nama}, selamat makan`);
+    }
+
+    Mahasiswa.prototype.main: function(jam){
+        this.energi -= jam;
+        console.log(`Hello ${this.nama}, selamat main`);
+    }
+
+    Mahasiswa.prototype.tidur: function(jam){
+        this.energi -= jam * 2;
+        console.log(`Hello ${this.nama}, selamat tidur`);
+    }
+
+}
+
+let ALFIN = new Mahasiswa('ALFIN'. 10);
+
+// 6. Class Javascript
+
+class Mahasiswa{
+    constructor(nama, energi){
+        this.nama = nama;
+        this.energi = energi;
+    }
+
+    makan(porsi){
+     this.energi += porsi;
+        console.log(`Hello ${this.nama}, selamat makan`);
+    }
+
+    main(jam){
+        this.energi -= jam;
+        console.log(`Hello ${this.nama}, selamat main`);
+    }
+
+    tidur(jam){
+        this.energi -= jam * 2;
+        console.log(`Hello ${this.nama}, selamat tidur`);
+    }
+}
+
+let ALFIN = new Mahasiswa('ALFIN'. 10);
+let PRIANDI = new Mahasiswa('PRIANDI'. 20);
+
+// Note :
+// pada saat menuliskan >>> let angka = [];
+// yang terjadi javascript membuatkan >>> 
+//   let angka = new Array();
+//      function Array() {
+//      let this = Object.create(Array.prototype);
+//      }
+
