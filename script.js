@@ -152,7 +152,7 @@ function Mahasiswa(nama, energi){
 
 }
 
-let ALFIN = new Mahasiswa('ALFIN'. 10);
+let ALFIN = new Mahasiswa('ALFIN', 10);
 
 // 6. Class Javascript
 
@@ -178,8 +178,8 @@ class Mahasiswa{
     }
 }
 
-let ALFIN = new Mahasiswa('ALFIN'. 10);
-let PRIANDI = new Mahasiswa('PRIANDI'. 20);
+let ALFIN = new Mahasiswa('ALFIN', 10);
+let PRIANDI = new Mahasiswa('PRIANDI', 20);
 
 // Note :
 // pada saat menuliskan >>> let angka = [];
